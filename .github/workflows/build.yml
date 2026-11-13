@@ -19,7 +19,8 @@ jobs:
       - name: Build
         working-directory: PS4Launcher
         run: gradle assembleDebug --no-daemon
-            - uses: actions/upload-artifact@v4
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
         with:
           name: PS4Launcher-apk
           path: PS4Launcher/app/build/outputs/apk/debug/app-debug.apk
